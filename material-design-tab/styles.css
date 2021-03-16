@@ -1,0 +1,141 @@
+:root {
+  --primary-color: #90caf9;
+  --accent-color: #f48fb1;
+  
+  --grey-700-color: #423f3f;
+  --grey-900-color: #333333;
+  
+  --base-spacing: 8px;
+  --font-m: 14px;
+  
+  --shadow-small: 0px 2px 4px -1px rgb(0 0 0 / 20%), 0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%);
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: var(--grey-900-color);
+}
+
+.tabs-box {
+  display: flex;
+  justify-content: center;
+  max-width: 640px;
+  height: 48px;
+  width: 100%;
+  background-color: var(--primary-color);
+  box-shadow: var(--shadow-small);
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+.tabs-menu {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.tab-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  font-weight: 500;
+  font-size: var(--font-m);
+  color: var(--grey-700-color);
+  text-transform: uppercase;
+  letter-spacing: 0.02857em;
+  white-space: normal;
+  letter-spacing: 0.02857em;
+  background-color: transparent;
+  padding: var(--base-spacing) calc(var(--base-spacing) * 2);
+  cursor: pointer;
+  transition: color 250ms ease-in;
+}
+
+.tab-button .active {
+  color: var(--grey-700);
+}
+
+.tab-button__content {
+  display: block;
+  pointer-events: none;
+}
+
+.tab-button:hover,
+.tab-button:focus {
+  outline: none;
+  color: var(--grey-700)
+}
+
+.tab-indicator {
+  background-color: var(--accent-color);
+  height: 3px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transition: left 250ms ease-in-out, width 650ms ease-in-out;
+}
+
+.tab-button__ripple {
+  position: absolute;
+  background-color: black;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  animation: ripple 1000ms linear infinite;
+  pointer-events: none;
+}
+
+.focus::after {
+  content: '';
+  position: absolute;
+  background-color: black;
+  opacity: .2;
+  border-radius: 50%;
+  width: 80%;
+  height: auto;
+  padding-top: 80%;
+  background: black;
+  transition: transform 300ms ease-in-out;
+  transform: scale(0);
+  animation: focusRipple 300ms linear infinite, focusPulse 1700ms linear 300ms infinite;
+}
+
+@keyframes ripple {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: .4;
+  }
+  
+  100% {
+    width: 500px;
+    height: 500px;
+    opacity: 0;
+  }
+}
+
+@keyframes focusRipple {
+  0% {
+    transform: scale(0);
+  }
+  
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes focusPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}

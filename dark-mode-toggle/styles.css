@@ -1,9 +1,9 @@
 html {
   --background-color: #fcfcfc;
-  --primary-color: #9c2fa8;
+  --primary-color: #fb00ff;
 }
 
-html[data-dark='true'] {
+html[data-dark="true"] {
   --background-color: #0f0f0f;
 }
 
@@ -19,7 +19,7 @@ body {
 }
 
 .toggle {
-  font-family: 'Play', sans-serif;
+  font-family: "Play", sans-serif;
   font-size: 40px;
   color: var(--primary-color);
   border: 4px solid var(--primary-color);

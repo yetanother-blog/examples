@@ -19,14 +19,15 @@ body {
 }
 
 .toggle {
-  font-family: "Play", sans-serif;
+  font-family: "Source Code Pro", monospace;
   font-size: 40px;
+  line-height: 1.3;
   color: var(--primary-color);
-  border: 4px solid var(--primary-color);
+  border: 3px solid var(--primary-color);
   background: none;
-  padding: 20px;
+  padding: 20px 40px;
   cursor: pointer;
-  text-transform: uppercase;
+  border-radius: 40px;
   transition: 200ms transform ease-in-out;
 }
 

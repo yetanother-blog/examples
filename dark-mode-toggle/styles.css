@@ -15,7 +15,6 @@ body {
   align-items: center;
   margin: 0;
   background-color: var(--background-color);
-  transition: 300ms background-color;
 }
 
 .toggle {

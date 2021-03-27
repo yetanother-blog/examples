@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Quintessential&family=UnifrakturMaguntia&family=Merriweather:wght@300&display=swap");
+
+:root {
+  --accent-color: #cf4242;
+  --background-color: #f4f0e5;
+  --base-font-size: 20px;
+  --headline-font: "UnifrakturMaguntia", cursive;
+  --copy-font: "Merriweather", serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(10px, 1fr));
+  column-gap: 10px;
+  padding-top: 20px;
+}
+
+.floating-castle {
+  grid-column: 1 / -1;
+  width: 100%;
+}
+
+.facebook-devil {
+  grid-column: 6 / 12;
+  width: 100%;
+}
+
+.headline,
+.subline {
+  font-size: 32px;
+  font-family: var(--headline-font);
+  margin-bottom: 0;
+  padding: 0;
+  grid-column: 2 / 12;
+  line-height: 0.4;
+  letter-spacing: 0.03em;
+}
+
+.subline {
+  grid-column: 2 / 12;
+}
+
+.headline::first-letter {
+  font-size: 80px;
+  display: inline-block;
+  margin-right: 4px;
+  color: var(--accent-color);
+  vertical-align: middle;
+}
+
+.paragraph {
+  font-size: var(--base-font-size);
+  font-family: var(--copy-font);
+  line-height: 1.6;
+  font-weight: 500;
+  margin-bottom: 40px;
+  grid-column: 2 / 12;
+}
+
+/* desktop */
+@media (min-width: 992px) {
+  .wrapper {
+    grid-template-columns: repeat(12, 60px [col-start]);
+  }
+
+  .floating-castle {
+    grid-column: 1 / 12;
+  }
+
+  .headline,
+  .subline {
+    font-size: 72px;
+  }
+
+  .headline {
+    grid-column: 1 / 12;
+  }
+
+  .headline::first-letter {
+    font-size: 220px;
+    margin-right: 18px;
+    padding: 0 10px;
+  }
+
+  p:first-of-type {
+    grid-column: 4 / 12;
+  }
+
+  .facebook-devil {
+    grid-column: 8 / 12;
+  }
+}

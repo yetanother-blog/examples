@@ -41,7 +41,7 @@ body {
   margin-bottom: 0;
   padding: 0;
   grid-column: 2 / 12;
-  line-height: 0.4;
+  line-height: 1;
   letter-spacing: 0.03em;
 }
 
@@ -51,7 +51,6 @@ body {
 
 .headline::first-letter {
   font-size: 80px;
-  display: inline-block;
   margin-right: 4px;
   color: var(--accent-color);
   vertical-align: middle;
@@ -69,7 +68,7 @@ body {
 /* desktop */
 @media (min-width: 992px) {
   .wrapper {
-    grid-template-columns: repeat(12, 60px [col-start]);
+    grid-template-columns: repeat(12, 60px);
   }
 
   .floating-castle {
@@ -79,6 +78,7 @@ body {
   .headline,
   .subline {
     font-size: 72px;
+    line-height: 0.4;
   }
 
   .headline {

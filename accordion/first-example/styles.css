@@ -1,0 +1,9 @@
+body {
+  font-family: Sans-Serif;
+  margin-top: 4rem;
+}
+  
+details {
+  max-width: 46rem;
+  margin: 0 auto;
+}

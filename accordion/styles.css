@@ -18,7 +18,6 @@ body {
   margin-top: 4rem;
 }
 
-footer,
 details {
   max-width: 46rem;
   margin: 0 auto;
@@ -50,16 +49,6 @@ details[open] .chevron-icon {
   padding: 1rem;
 }
 
-summary {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 1.125rem;
-  color: var(--grey-900);
-  padding: 0.5rem 0 0.5rem 1rem;
-  overflow: hidden;
-}
-
 p {
   width: 65ch;
   max-width: 100%;;
@@ -68,6 +57,13 @@ p {
 
 /* Get rid of the marker pseudo-element from all browser for good */
 details > summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.125rem;
+  color: var(--grey-900);
+  padding: 0.5rem 0 0.5rem 1rem;
+  cursor: pointer;
   list-style: none;
 }
 
